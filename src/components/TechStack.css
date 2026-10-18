@@ -1,164 +1,369 @@
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+/* ========================================================
+   TECH STACK: ZERO-VOID, BALANCED & DYNAMIC DESIGN
+   ======================================================== */
+
+.tech-section {
+  position: relative;
+  padding: 80px 0;
 }
 
-.tech-card {
+.tech-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 24px;
+}
+
+/* ========================================================
+   1) LANGUAGES CAPSULE: Centered, Zero-Void Floating Pill
+   ======================================================== */
+
+.languages-center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+  width: 100%;
+}
+
+.languages-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 4px 20px -2px rgba(44, 36, 26, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.languages-strip:hover {
+  border-color: var(--border-hover, #D9C8B4);
+  box-shadow: 0 8px 28px -4px rgba(44, 36, 26, 0.09);
+  transform: translateY(-2px);
+}
+
+.languages-strip-left {
   display: flex;
   flex-direction: column;
-  padding: 32px 28px;
-  background: var(--bg-surface);
+  align-items: flex-start;
+  gap: 2px;
 }
 
-.tech-card-header {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+.languages-strip-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
 }
 
-.tech-icon-bubble {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background-color: var(--accent-cognac-light);
+.languages-strip-caption {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
   color: var(--accent-cognac);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--accent-cognac-border);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.languages-strip-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-card);
   flex-shrink: 0;
 }
 
-.tech-category-title {
-  font-family: var(--font-serif);
-  font-size: 1.55rem;
-  font-weight: 600;
-  color: var(--text-primary);
+.languages-strip-tiles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.tech-category-desc {
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
+.languages-tile-wrap {
+  width: 130px;
+  min-width: 120px;
+  display: flex;
+}
+
+/* ========================================================
+   2) PAIRED CARDS (ROW 1): Cards 01 & 02 (Equal Height)
+   ======================================================== */
+
+.tech-paired-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
   margin-bottom: 24px;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.tech-skills-list {
+.tech-group-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 28px;
-  flex-grow: 1;
+  padding: 24px 24px 22px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px -2px rgba(44, 36, 26, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.tech-skill-pill {
+.tech-group-card:hover {
+  border-color: var(--border-hover, #D9C8B4);
+  box-shadow: 0 10px 30px -4px rgba(44, 36, 26, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Header Topbar */
+.tech-card-topbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 14px;
-  background: var(--bg-surface-subtle);
-  border: 1px solid var(--border-light);
-  border-radius: 10px;
-  transition: all 0.2s ease;
+  margin-bottom: 12px;
 }
 
-.tech-skill-pill:hover {
-  background: var(--bg-pill-hover);
-  border-color: var(--border-card);
-  transform: translateX(3px);
-}
-
-.skill-name {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.88rem;
-  color: var(--text-primary);
-}
-
-.skill-detail {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-}
-
-.tech-card-footer {
-  padding-top: 16px;
-  border-top: 1px solid var(--border-light);
-}
-
-.tech-footer-link {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--accent-cognac);
+.step-number-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  transition: color 0.2s ease, transform 0.2s ease;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-cognac);
+  background: var(--bg-warm);
+  border: 1px solid var(--border-card);
+  padding: 3px 9px;
+  border-radius: 9999px;
+  letter-spacing: 0.05em;
 }
 
-.tech-footer-link:hover {
-  color: var(--accent-cognac-hover);
-  transform: translateX(4px);
+.step-icon-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-warm);
+  border: 1px solid var(--border-card);
+  color: var(--accent-cognac);
 }
 
-@media (max-width: 960px) {
-  .tech-grid {
+.tech-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin: 0 0 2px 0;
+}
+
+.tech-english-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent-cognac);
+  letter-spacing: 0.02em;
+  margin-bottom: 18px;
+}
+
+/* 2x2 Grid inside Cards 01 & 02 */
+.tech-tools-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: auto;
+}
+
+.tool-tile-wrapper {
+  display: flex;
+  min-width: 0;
+  width: 100%;
+}
+
+/* ========================================================
+   3) WIDE CARD (ROW 2): Card 03 (Panoramic 7-Tool Row)
+   ======================================================== */
+
+.tech-wide-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 28px 24px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px -2px rgba(44, 36, 26, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  width: 100%;
+}
+
+.tech-wide-card:hover {
+  border-color: var(--border-hover, #D9C8B4);
+  box-shadow: 0 10px 30px -4px rgba(44, 36, 26, 0.08);
+  transform: translateY(-2px);
+}
+
+.tech-tools-panoramic-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS
+   ======================================================== */
+
+/* Small Desktop / Laptop (<1100px) */
+@media (max-width: 1100px) {
+  .tech-tools-panoramic-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Tablet (<900px) */
+@media (max-width: 900px) {
+  .tech-paired-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .tech-card {
-    padding: 24px 20px;
+  .tech-tools-panoramic-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Mobile (<640px) */
+@media (max-width: 640px) {
+  .tech-section {
+    padding: 60px 0;
+  }
+
+  .tech-container {
+    padding: 0 16px;
+  }
+
+  /* Languages Capsule Mobile */
+  .languages-strip {
+    border-radius: 20px;
+    padding: 16px 18px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .languages-strip-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .languages-strip-divider {
+    display: none;
+  }
+
+  .languages-strip-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 10px;
+  }
+
+  .languages-tile-wrap {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Cards Mobile */
+  .tech-group-card,
+  .tech-wide-card {
+    padding: 20px 16px 18px;
+    border-radius: 18px;
+  }
+
+  .tech-card-title {
+    font-size: 1.3rem;
+  }
+
+  .tech-tools-2x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .tech-tools-panoramic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 }
 
 /* ========================================================
    DARK THEME SPECIFIC TECH STACK STYLES
    ======================================================== */
-[data-theme="dark"] .tech-card {
-  background: #17191E;
+
+[data-theme="dark"] .languages-strip {
+  background: #14161A;
   border-color: #232730;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
 }
 
-[data-theme="dark"] .tech-card:hover {
-  border-color: rgba(255, 255, 255, 0.28);
+[data-theme="dark"] .languages-strip:hover {
+  border-color: #333945;
+  box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.6);
 }
 
-[data-theme="dark"] .tech-icon-bubble {
-  background-color: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.16);
-}
-
-[data-theme="dark"] .tech-category-title {
+[data-theme="dark"] .languages-strip-title {
   color: #FFFFFF;
 }
 
-[data-theme="dark"] .tech-skill-pill {
-  background: #121418;
-  border-color: #20242B;
-}
-
-[data-theme="dark"] .tech-skill-pill:hover {
-  background: #1D2128;
-  border-color: rgba(255, 255, 255, 0.22);
-}
-
-[data-theme="dark"] .skill-name {
+[data-theme="dark"] .languages-strip-caption {
   color: #FFFFFF;
 }
 
-[data-theme="dark"] .skill-detail {
-  color: #9DA4B0;
+[data-theme="dark"] .languages-strip-divider {
+  background: #232730;
 }
 
-[data-theme="dark"] .tech-footer-link {
+[data-theme="dark"] .tech-group-card,
+[data-theme="dark"] .tech-wide-card {
+  background: #14161A;
+  border-color: #232730;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .tech-group-card:hover,
+[data-theme="dark"] .tech-wide-card:hover {
+  border-color: #333945;
+  box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .tech-card-title {
   color: #FFFFFF;
 }
 
-[data-theme="dark"] .tech-footer-link:hover {
-  color: #E2E8F0;
+[data-theme="dark"] .tech-english-tag {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .step-number-badge {
+  background: #1A1D23;
+  border-color: #2A303C;
+  color: #D4AF37;
+}
+
+[data-theme="dark"] .step-icon-bubble {
+  background: #1A1D23;
+  border-color: #2A303C;
+  color: #D4AF37;
 }
 

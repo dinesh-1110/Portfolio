@@ -78,43 +78,6 @@ export const portfolioContent = {
         iconName: "BarChart3",
       },
     ],
-    dashboard: {
-      tag: "AUTOMATED REGRESSION SUITE",
-      title: "Highly Deterministic Regression Test Run",
-      status: "All Services Healthy",
-      stats: [
-        { label: "TESTS EXECUTED", value: "100+", sub: "Major regression suites" },
-        { label: "REGRESSION REDUCTION", value: "75%", sub: "Cycle time reduction" },
-        { label: "AI SPEEDUP", value: "30%", sub: "Via Codeium AI" },
-        { label: "SCRIPTS DELIVERED", value: "39+", sub: "Single release cycle" },
-      ],
-      testCases: [
-        {
-          name: "humana_member_enrollment_spec.cs",
-          assertions: "42 assertions",
-          duration: "1.8s",
-          status: "PASSED",
-        },
-        {
-          name: "rxmanagement_greendale_api_spec.cs",
-          assertions: "58 assertions",
-          duration: "2.4s",
-          status: "PASSED",
-        },
-        {
-          name: "centerwell_data_ingestion_api_spec.cs",
-          assertions: "32 assertions",
-          duration: "1.2s",
-          status: "PASSED",
-        },
-        {
-          name: "claims_e2e_regression_suite.cs",
-          assertions: "78 assertions",
-          duration: "3.1s",
-          status: "PASSED",
-        },
-      ],
-    },
   },
 
   technologies: {
@@ -129,10 +92,32 @@ export const portfolioContent = {
         description:
           "Robust multi-browser testing architectures, Page Object Model (POM), data-driven frameworks, and Codeium AI script optimization.",
         skills: [
-          { name: "Selenium WebDriver", detail: "Primary UI Test Harness" },
-          { name: "C# & Java", detail: "Core Automation Languages" },
-          { name: "NUnit & TestNG", detail: "Test Runners & Assertions" },
-          { name: "Codeium AI", detail: "30% Faster Script Generation" },
+          {
+            name: "Selenium WebDriver",
+            detail: "Primary UI Test Harness",
+            logos: [{ type: "svg", id: "selenium", name: "Selenium WebDriver" }],
+          },
+          {
+            name: "C# & Java",
+            detail: "Core Automation Languages",
+            logos: [
+              { type: "svg", id: "csharp", name: "C#" },
+              { type: "svg", id: "java", name: "Java" },
+            ],
+          },
+          {
+            name: "NUnit & TestNG",
+            detail: "Test Runners & Assertions",
+            logos: [
+              { type: "monogram", initials: "NU", name: "NUnit" },
+              { type: "monogram", initials: "NG", name: "TestNG" },
+            ],
+          },
+          {
+            name: "Codeium AI",
+            detail: "30% Faster Script Generation",
+            logos: [{ type: "svg", id: "codeium", name: "Codeium AI" }],
+          },
         ],
         footerLink: "View UI Automation Architecture →",
       },
@@ -142,10 +127,26 @@ export const portfolioContent = {
         description:
           "Validating RESTful services, schema drift, request/response headers, status codes, and high-volume data ingestion.",
         skills: [
-          { name: "RestSharp (C#)", detail: "Enterprise API Harness" },
-          { name: "Postman", detail: "Contract & Endpoint Testing" },
-          { name: "Rest Assured", detail: "Java RESTful Validation" },
-          { name: "Data-Driven Suites", detail: "Negative & Edge Cases" },
+          {
+            name: "RestSharp (C#)",
+            detail: "Enterprise API Harness",
+            logos: [{ type: "monogram", initials: "RS", name: "RestSharp" }],
+          },
+          {
+            name: "Postman",
+            detail: "Contract & Endpoint Testing",
+            logos: [{ type: "svg", id: "postman", name: "Postman" }],
+          },
+          {
+            name: "Rest Assured",
+            detail: "Java RESTful Validation",
+            logos: [{ type: "monogram", initials: "RA", name: "Rest Assured" }],
+          },
+          {
+            name: "Data-Driven Suites",
+            detail: "Negative & Edge Cases",
+            logos: [{ type: "monogram", initials: "DD", name: "Data-Driven Suites" }],
+          },
         ],
         footerLink: "View API Test Harnesses →",
       },
@@ -155,10 +156,35 @@ export const portfolioContent = {
         description:
           "Continuous testing pipelines, test governance, requirement traceability, and cross-functional Agile leadership.",
         skills: [
-          { name: "Jenkins CI/CD", detail: "Automated Build Quality Gates" },
-          { name: "Git & GitHub", detail: "Version Control & Branching" },
-          { name: "Azure DevOps & QTest", detail: "Test Management & Defect Triaging" },
-          { name: "VS Code & Visual Studio", detail: "Core Engineering Platforms" },
+          {
+            name: "Jenkins CI/CD",
+            detail: "Automated Build Quality Gates",
+            logos: [{ type: "svg", id: "jenkins", name: "Jenkins" }],
+          },
+          {
+            name: "Git & GitHub",
+            detail: "Version Control & Branching",
+            logos: [
+              { type: "svg", id: "git", name: "Git" },
+              { type: "svg", id: "github", name: "GitHub" },
+            ],
+          },
+          {
+            name: "Azure DevOps & QTest",
+            detail: "Test Management & Defect Triaging",
+            logos: [
+              { type: "svg", id: "azuredevops", name: "Azure DevOps" },
+              { type: "monogram", initials: "QT", name: "QTest" },
+            ],
+          },
+          {
+            name: "VS Code & Visual Studio",
+            detail: "Core Engineering Platforms",
+            logos: [
+              { type: "svg", id: "vscode", name: "VS Code" },
+              { type: "svg", id: "visualstudio", name: "Visual Studio" },
+            ],
+          },
         ],
         footerLink: "View Pipeline Integrations →",
       },
