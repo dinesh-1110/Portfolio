@@ -4,18 +4,38 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem("portfolio_theme");
-    if (saved) return saved;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    // Clean up old automatic key if it exists
+    try {
+      localStorage.removeItem("portfolio_theme");
+    } catch {
+      // ignore
+    }
+
+    // Only load saved theme if the user manually toggled it
+    try {
+      const saved = localStorage.getItem("portfolio_user_theme");
+      if (saved === "dark" || saved === "light") {
+        return saved;
+      }
+    } catch {
+      // ignore
+    }
+
+    // Default theme is ALWAYS light
+    return "light";
   });
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("portfolio_theme", theme);
   }, [theme]);
 
   const toggleTheme = (e) => {
     const nextTheme = theme === "dark" ? "light" : "dark";
+    try {
+      localStorage.setItem("portfolio_user_theme", nextTheme);
+    } catch {
+      // ignore
+    }
 
     // Add smooth CSS transition class
     document.documentElement.classList.add("theme-transitioning");
