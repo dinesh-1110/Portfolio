@@ -1,0 +1,682 @@
+/* ========================================================
+   PROFESSIONAL EXPERIENCE SECTION - UNIFIED SHOWCASE
+   ======================================================== */
+
+.experience-section {
+  position: relative;
+}
+
+.experience-showcase-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.experience-main-card {
+  padding: 44px 48px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle accent glow at the top */
+.experience-main-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-cognac) 0%, var(--accent-cognac-border) 60%, transparent 100%);
+}
+
+/* Top Banner */
+.exp-top-banner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.exp-header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 720px;
+}
+
+.exp-status-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.exp-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  background: var(--status-green-bg);
+  border: 1px solid var(--status-green-border);
+  color: var(--status-green);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.exp-status-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--status-green);
+  box-shadow: 0 0 8px var(--status-green);
+}
+
+.exp-division-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.exp-role-title {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* Entity Chain: Cognizant -> for client -> HUMANA */
+.exp-entity-chain {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.entity-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 14px;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.entity-chip:hover {
+  border-color: var(--border-card);
+  transform: translateY(-1px);
+}
+
+.employer-chip {
+  border-color: var(--accent-cognac-border);
+}
+
+.client-chip {
+  background: var(--accent-cognac-light);
+  border-color: var(--accent-cognac-border);
+}
+
+.entity-icon {
+  color: var(--text-muted);
+}
+
+.client-icon {
+  color: var(--accent-cognac);
+}
+
+.entity-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entity-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.entity-name {
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.client-name {
+  color: var(--accent-cognac);
+}
+
+.entity-divider {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Date Box */
+.exp-date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.exp-date-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-surface-subtle);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.exp-duration-badge {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-cognac);
+  font-weight: 600;
+}
+
+/* Metrics Strip */
+.exp-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.exp-metric-card {
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.exp-metric-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-card);
+}
+
+.exp-metric-val {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.exp-metric-lbl {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent-cognac);
+}
+
+.exp-metric-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Subsection Titles */
+.exp-subsection-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.section-sub-icon {
+  color: var(--accent-cognac);
+}
+
+/* Engineering Pillars Grid (2x2) */
+.exp-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.pillar-card {
+  padding: 24px 26px;
+  border-radius: 18px;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.2s ease;
+}
+
+.pillar-card:hover {
+  border-color: var(--border-card);
+}
+
+.pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pillar-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--accent-cognac-light);
+  color: var(--accent-cognac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pillar-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pillar-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pillar-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-cognac);
+  font-weight: 600;
+}
+
+.pillar-desc {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* Client Projects Section */
+.exp-projects-section {
+  padding-top: 10px;
+}
+
+.exp-projects-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.exp-projects-subtitle {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-top: -14px;
+}
+
+.exp-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.client-project-card {
+  padding: 26px 28px;
+  border-radius: 20px;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.client-project-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-cognac-border);
+}
+
+.project-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--accent-cognac);
+}
+
+.project-client-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--accent-cognac-light);
+  color: var(--accent-cognac);
+}
+
+.project-name {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.project-desc {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tech-tag-chip {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+}
+
+/* Cognizant Honors & Recognitions */
+.exp-awards-section {
+  padding: 30px 34px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, var(--bg-surface-subtle) 0%, var(--bg-card-muted) 100%);
+  border: 1px solid var(--accent-cognac-border);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.awards-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.awards-main-icon {
+  color: var(--accent-cognac);
+}
+
+.awards-banner-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.exp-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.award-item-card {
+  padding: 20px 22px;
+  border-radius: 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.award-item-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+}
+
+.award-sparkle {
+  color: var(--accent-cognac);
+}
+
+.award-conferred {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--accent-cognac);
+  font-weight: 600;
+}
+
+.award-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN (Tablets & Mobile)
+   ======================================================== */
+
+@media (max-width: 960px) {
+  .exp-metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exp-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-main-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+    gap: 28px;
+  }
+
+  .exp-top-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding-bottom: 22px;
+  }
+
+  .exp-role-title {
+    font-size: 1.75rem;
+  }
+
+  .exp-entity-chain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .entity-chip {
+    width: 100%;
+    padding: 10px 14px;
+  }
+
+  .entity-divider {
+    display: none;
+  }
+
+  .exp-date-box {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .exp-date-row {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .exp-metrics-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .exp-metric-card {
+    padding: 16px 14px;
+  }
+
+  .exp-metric-val {
+    font-size: 1.8rem;
+  }
+
+  .pillar-card {
+    padding: 20px 18px;
+  }
+
+  .client-project-card {
+    padding: 20px 18px;
+  }
+
+  .exp-awards-section {
+    padding: 22px 18px;
+  }
+}
+
+/* ========================================================
+   DARK THEME SPECIFIC EXPERIENCE STYLES
+   ======================================================== */
+[data-theme="dark"] .experience-main-card::before {
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+}
+
+[data-theme="dark"] .employer-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+[data-theme="dark"] .client-chip {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+[data-theme="dark"] .client-icon,
+[data-theme="dark"] .client-name {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .exp-metric-card {
+  background: #17191E;
+  border-color: #242832;
+}
+
+[data-theme="dark"] .exp-metric-val {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .pillar-card {
+  background: #17191E;
+  border-color: #232730;
+}
+
+[data-theme="dark"] .pillar-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+[data-theme="dark"] .pillar-icon-box {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+[data-theme="dark"] .pillar-title {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .pillar-tag {
+  color: #9DA4B0;
+}
+
+[data-theme="dark"] .client-project-card {
+  background: #17191E;
+  border-color: #232730;
+}
+
+[data-theme="dark"] .client-project-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+[data-theme="dark"] .project-client-tag {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .project-name {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .tech-tag-chip {
+  background: #111316;
+  border-color: #252932;
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .award-item-card {
+  background: #17191E;
+  border-color: #232730;
+}
+
+[data-theme="dark"] .award-item-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+[data-theme="dark"] .awards-main-icon,
+[data-theme="dark"] .award-sparkle {
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .award-item-top strong {
+  color: #FFFFFF;
+}
+

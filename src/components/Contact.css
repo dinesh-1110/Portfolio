@@ -1,0 +1,270 @@
+/* ========================================================
+   CONTACT & COLLABORATE SECTION - CLEAN CARD SHOWCASE
+   ======================================================== */
+
+.contact-section {
+  position: relative;
+}
+
+.contact-showcase-card {
+  padding: 48px 52px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle accent glow line at top */
+.contact-showcase-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-cognac) 0%, var(--accent-cognac-border) 60%, transparent 100%);
+}
+
+.contact-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 680px;
+}
+
+.contact-main-title {
+  font-family: var(--font-serif);
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.contact-main-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* 2x2 Channels Grid */
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-channel-card {
+  padding: 26px 28px;
+  border-radius: 20px;
+  background: var(--bg-surface-subtle);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-channel-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-cognac-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.email-card {
+  border-color: var(--accent-cognac-border);
+  background: linear-gradient(135deg, var(--bg-surface-subtle) 0%, var(--bg-card-muted) 100%);
+}
+
+.channel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.channel-icon-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-cognac-light);
+  color: var(--accent-cognac);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.channel-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.channel-copy-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-card);
+  background: var(--bg-pill-hover);
+}
+
+.channel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.channel-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.channel-value {
+  font-family: var(--font-sans);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  word-break: break-all;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.channel-link:hover {
+  color: var(--accent-cognac);
+}
+
+.channel-action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-cognac);
+  transition: gap 0.15s ease;
+  width: fit-content;
+}
+
+.channel-action-link:hover {
+  gap: 9px;
+  color: var(--accent-cognac-hover);
+}
+
+/* Footer of the card */
+.contact-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-light);
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.location-pin-icon {
+  color: var(--accent-cognac);
+}
+
+.availability-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.text-green {
+  color: #10B981 !important;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .contact-channels-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-showcase-card {
+    padding: 32px 24px;
+  }
+
+  .contact-main-title {
+    font-size: 1.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* ========================================================
+   DARK THEME SPECIFIC CONTACT STYLES
+   ======================================================== */
+[data-theme="dark"] .contact-card::before {
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+}
+
+[data-theme="dark"] .contact-channel-card {
+  background: #17191E;
+  border-color: #232730;
+}
+
+[data-theme="dark"] .contact-channel-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+[data-theme="dark"] .email-card {
+  background: linear-gradient(135deg, #17191E 0%, #131518 100%);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+[data-theme="dark"] .channel-icon-bubble {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .channel-copy-btn {
+  background: #20242B;
+  border-color: #2E333C;
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .channel-copy-btn:hover {
+  background: #282D36;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .channel-action-arrow {
+  color: #FFFFFF;
+}
+

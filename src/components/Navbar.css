@@ -1,0 +1,203 @@
+/* ========================================================
+   SLIM, REFINED NAVBAR WITH GLASSMORPHISM
+   ======================================================== */
+
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
+  background-color: transparent;
+}
+
+.navbar-header.is-scrolled {
+  background-color: var(--bg-nav-scrolled);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Brand - Strictly Single Line */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.brand-star {
+  font-size: 0.88rem;
+  color: var(--accent-cognac);
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .brand-star {
+  transform: rotate(45deg) scale(1.15);
+}
+
+.brand-name {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Center Pill Navigation - Refined, Proportional, No Text Wrapping */
+.navbar-nav-pill {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--bg-pill);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-card);
+  padding: 4px 5px;
+  border-radius: 9999px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+  flex-shrink: 0;
+}
+
+.nav-link {
+  position: relative;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  transition: color 0.2s ease;
+  z-index: 1;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-text {
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.nav-active-pill {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-surface);
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-light);
+  z-index: -1;
+}
+
+/* Right Actions: Contact Me & Theme Toggle */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.navbar-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--accent-cognac);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(120, 68, 33, 0.22);
+}
+
+.navbar-cta-btn:hover {
+  background-color: var(--accent-cognac-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(120, 68, 33, 0.32);
+}
+
+.cta-icon {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navbar-cta-btn:hover .cta-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .navbar-nav-pill {
+    display: none;
+  }
+
+  .navbar-header {
+    background-color: var(--bg-nav-mobile);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-card);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-header {
+    height: 60px;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+    gap: 8px;
+  }
+
+  .navbar-brand {
+    font-size: 0.98rem;
+    gap: 6px;
+  }
+
+  .navbar-actions {
+    gap: 6px;
+  }
+
+  .navbar-cta-btn {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+    gap: 4px;
+  }
+
+  .theme-toggle-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
