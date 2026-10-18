@@ -1,5 +1,10 @@
 # Dinesh Kumar Lakshmanan — Senior Quality Engineer / SDET Lead Portfolio
 
+[![Live Website](https://img.shields.io/badge/Live%20Website-dinesh--1110.github.io%2FPortfolio-14161A?style=for-the-badge&logo=github&logoColor=white)](https://dinesh-1110.github.io/Portfolio/)
+[![GitHub Pages Deployment](https://img.shields.io/badge/Hosted%20On-GitHub%20Pages-2ea44f?style=for-the-badge&logo=githubpages&logoColor=white)](https://dinesh-1110.github.io/Portfolio/)
+
+🌐 **Live URL**: [https://dinesh-1110.github.io/Portfolio/](https://dinesh-1110.github.io/Portfolio/)
+
 An editorial, high-performance portfolio crafted for **Dinesh Kumar Lakshmanan**, Senior Quality Engineer & SDET with 4+ years of experience leading UI and API test automation frameworks across HUMANA enterprise healthcare platforms.
 
 ---
@@ -128,6 +133,7 @@ Portfolio/
 
 **Dinesh Kumar Lakshmanan**
 - Senior Quality Engineer / SDET Lead (Cognizant)
+- 🌐 Website: [https://dinesh-1110.github.io/Portfolio/](https://dinesh-1110.github.io/Portfolio/)
 - Email: [dineshlakshmanan1110@gmail.com](mailto:dineshlakshmanan1110@gmail.com)
 - LinkedIn: [linkedin.com/in/dinesh-kumar-lakshmanan](https://linkedin.com/in/dinesh-kumar-lakshmanan)
 - Phone: +91 80567 17293
